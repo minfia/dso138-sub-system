@@ -66,11 +66,11 @@ int main(void)
 
     while (1) {
         // キー入力処理
-        if (0 == port_get(&PINA, 3)) {
+        if (0 == port_get(&PINB, 3)) {
             // 設定記憶リセット
             eeprom_reset();
         }
-        if (0 == port_get(&PINA, 7)) {
+        if (0 == port_get(&PINB, 7)) {
             dso138_press_ok_button();
         } else {
             dso138_release_ok_button();

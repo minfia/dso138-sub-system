@@ -1,8 +1,13 @@
 /**
- * @file system.h
- * @brief システムの設定を定義
+ * @file    system.h
+ * @brief   システムの設定を定義
  *
- * @author minfia
+ * @author  minfia
+ * @note
+ *  Fuse bit設定<br>
+ *    EXTENDED: 0xF9<br>
+ *    HIGH:     0xDC<br>
+ *    LOW:      0xE2<br>
  */
 
 

@@ -60,12 +60,12 @@ void app_key_matrix_init(void)
 {
     timer0_init();
     KEY_SCAN_KEY_TYPE_t o[KEY_SCAN_NUM_MAX];
-    o[0].port = &PORTA;
-    o[0].num = PA0;
-    o[1].port = &PORTA;
-    o[1].num = PA1;
-    o[2].port = &PORTA;
-    o[2].num = PA2;
+    o[0].port = &PORTB;
+    o[0].num = PB0;
+    o[1].port = &PORTB;
+    o[1].num = PB1;
+    o[2].port = &PORTB;
+    o[2].num = PB2;
     key_matrix_init(o, KEY_SCAN_NUM_MAX, 3);
     input_key = INPUT_KEY_TYPE_NONE;
 }
@@ -73,7 +73,7 @@ void app_key_matrix_init(void)
 void app_key_matrix_poll(void)
 {
     timer0_stop();
-    READ_KEYS_t keys = key_matrix_scan(PINA, 3, 4);
+    READ_KEYS_t keys = key_matrix_scan(PINB, 3, 4);
     timer0_resume();
     input_key = key_proc(keys);
 }

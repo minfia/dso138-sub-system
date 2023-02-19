@@ -2,7 +2,7 @@
  * @file    systick.h
  * @brief   system tick
  *
- * @author minfia
+ * @author  minfia
  */
 
 
@@ -19,12 +19,20 @@ extern "C" {
 
 
 /**
+ * @~japanese
  * @brief   systickタイマ初期化
+ *
+ * @~
+ * @brief   Initialize systick
  */
 void systick_init();
 
 /**
+ * @~japanese
  * @brief   現在のsystickを取得
+ *
+ * @~
+ * @brief   Get systick
  */
 uint32_t get_systick();
 

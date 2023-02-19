@@ -1,6 +1,9 @@
 /**
  * @file    rotary_encoder.c
+ * @~japanase
  * @brief   ロータリーエンコーダデバイスドライバ
+ * @~
+ * @brief   rotary encoder device driver.
  *
  * @author  minfia
  */ 
@@ -8,12 +11,28 @@
 #include "rotary_encoder.h"
 
 
-volatile static ROTARY_ENCODER_ROTATE_STATE rotate_state;   //!< 回転方向
-volatile static uint8_t pin_history;                        //!< A相B相の状態保持用
+/**
+ * @~japanese
+ * @brief   回転方向
+ * @~
+ * @brief   direction of rotate.
+ */
+volatile static ROTARY_ENCODER_ROTATE_STATE rotate_state;
+
+/**
+ * @~japanese
+ * @brief   A相B相の状態保持用
+ * @~
+ * @brief   Value of hold to status in signal A and signal B.
+ */
+volatile static uint8_t pin_history;
 
 
 /**
- * @brief   1クリック分のビット遷移と回転方向構造体
+ * @~japanese
+ * @brief   1クリック分のビット遷移と回転方向の構造体
+ * @~
+ * @brief   Structs for bit transition in 1 click and direction of rotate.
  */
 typedef struct {
     uint8_t state_val;
@@ -21,7 +40,10 @@ typedef struct {
 } ROTARY_DIRECTION_t;
 
 /**
- * @brief   正転/逆転の情報
+ * @~japanese
+ * @brief   正転/逆転と1クリック分の情報
+ * @~
+ * @brief   Information of CW/CCW and 1 click bits.
  */
  static const ROTARY_DIRECTION_t rotary_directions[] = {
     { 0b10000111, ROTARY_ENCODER_ROTATE_STATE_CW  },

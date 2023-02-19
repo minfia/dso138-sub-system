@@ -2,7 +2,7 @@
  * @file    systick.c
  * @brief   system tick
  *
- * @author minfia
+ * @author  minfia
  */
 
 
@@ -14,23 +14,23 @@
 volatile static uint32_t system_timer = 0;
 
 
-ISR(TIMER3_COMPA_vect)
+ISR(TIMER1_COMPA_vect)
 {
     ++system_timer;
 }
 
 void systick_init()
 {
-    // 1msに設定
-    TCCR3A = 0;
-    TCCR3B |= (1 << WGM32);
-    TCCR3C = 0;
-    ETIMSK |= (1 << OCIE3A);
+    // setting to 1ms
+    TCCR1A = 0;
+    TCCR1B |= (1 << WGM12);
+    TCCR1C = 0;
+    TIMSK1 |= (1 << OCIE1A);
 
-    OCR3A = 499;
-    TCNT3 = 0;
+    OCR1A = 499;
+    TCNT1 = 0;
 
-    TCCR3B |= 0b010;
+    TCCR1B |= 0b010;
 }
 
 uint32_t get_systick()
