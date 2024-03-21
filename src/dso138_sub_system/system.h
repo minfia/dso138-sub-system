@@ -20,8 +20,8 @@ extern "C" {
 #endif /* __cplusplus */
 
 
-#define VERSION "0.0.1"
-#define VERSION_BCD 0x001
+#define VERSION "1.0.0"
+#define VERSION_BCD 0x100
 #define PROGRAM "DSO138 Sub System"
 
 
