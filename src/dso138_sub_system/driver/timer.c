@@ -39,18 +39,18 @@ void timer0_init(void)
 void timer0_start(void)
 {
     TCNT0 = 0;
-    TIMSK0 |= (0b1 << OCIE0A);
-    TCCR0B |= 0b111; // clock divider is 1024 clk
+    TIMSK0 |= (1 << OCIE0A);
+    TCCR0B |= 0b101; // clock divider is 1024 clk
 }
 
 void timer0_stop(void)
 {
-    TIMSK0 &= ~(0b1 << OCIE0A);
+    TIMSK0 &= ~(1 << OCIE0A);
     TCCR0B &= 0b11111000;
 }
 
 void timer0_resume(void)
 {
-    TIMSK0 |= (0b1 << OCIE0A);
-    TCCR0B |= 0b111; // clock divider is 1024 clk
+    TIMSK0 |= (1 << OCIE0A);
+    TCCR0B |= 0b101; // clock divider is 1024 clk
 }

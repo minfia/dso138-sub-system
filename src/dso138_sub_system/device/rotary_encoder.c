@@ -61,6 +61,7 @@ void rotary_enc_regist_pin(uint8_t pin)
 {
     pin_history <<= 2;
     pin_history |= pin;
+    rotary_enc_calc_state();
 }
 
 void rotary_enc_calc_state(void)

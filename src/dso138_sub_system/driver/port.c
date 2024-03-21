@@ -39,19 +39,20 @@ void port_init()
           PORTD6: -
           PORTD7: SEL
         Virtual switch of DSO138
-          PINB7: OK
+          PINC2: OK
         Rotary encoder
-          PINC0: Signal A
-          PINC1: Signal B
+          PINC0:  Signal A
+          PINC1:  Signal B
+          PORTC3: LED
         Reset to EEPROM
-          PINB3
+          PINC4
     */
     DDRB = 0x07;
     PORTB = 0xF8;
     DDRD = 0xF0;
     PORTD = 0x0F;
-    DDRC = 0x00;
-    PORTC = 0xFF;
+    DDRC = 0x08;
+    PORTC = 0xF7;
 
     // interrupt setting
     PCICR = 0x02;  // Enabled PCI1
