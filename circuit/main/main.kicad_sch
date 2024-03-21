@@ -1,0 +1,82 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 5093e136-bc6a-448f-8bb7-a029192fbd84)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 21.59 48.26) (size 59.69 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 4aee915c-9f84-4bae-895d-d43aae1aef3f)
+    (property "Sheetname" "MCU" (at 21.59 46.9134 0)
+      (effects (font (size 2.54 2.54)) (justify left bottom))
+    )
+    (property "Sheetfile" "mcu.kicad_sch" (at 21.59 52.6546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "main"
+        (path "/5093e136-bc6a-448f-8bb7-a029192fbd84" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 21.59 68.58) (size 59.69 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 6fa9678a-789e-489e-b3c4-45ddfaa247ec)
+    (property "Sheetname" "キー入力" (at 21.59 67.2334 0)
+      (effects (font (size 2.54 2.54)) (justify left bottom))
+    )
+    (property "Sheetfile" "input_key.kicad_sch" (at 21.59 72.9746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "main"
+        (path "/5093e136-bc6a-448f-8bb7-a029192fbd84" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 21.59 29.21) (size 59.69 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 7fda2cfd-b2ca-42ac-8c31-09cb87fd7040)
+    (property "Sheetname" "電源" (at 21.59 27.8634 0)
+      (effects (font (size 2.54 2.54)) (justify left bottom))
+    )
+    (property "Sheetfile" "power.kicad_sch" (at 21.59 33.6046 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "main"
+        (path "/5093e136-bc6a-448f-8bb7-a029192fbd84" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 21.59 88.9) (size 59.69 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid cff7ce79-fc81-4dc6-bb40-aa37c0b1e3fe)
+    (property "Sheetname" "LCD SW" (at 21.59 87.5534 0)
+      (effects (font (size 2.54 2.54)) (justify left bottom))
+    )
+    (property "Sheetfile" "lcd_sw.kicad_sch" (at 21.59 93.2946 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "main"
+        (path "/5093e136-bc6a-448f-8bb7-a029192fbd84" (page "5"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
